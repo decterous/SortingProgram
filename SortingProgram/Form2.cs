@@ -16,7 +16,6 @@ namespace SortingProgram
         public static List<String> output;
         public static bool running = false;
         int counter;
-        String total;
 
         public ISorter sortingEngine;
 
@@ -25,7 +24,6 @@ namespace SortingProgram
             InitializeComponent();
 
             sortingEngine = new InsertWithBinarySearchAndFirstValTest(a);
-            total = "best : "+sortingEngine.getMINTime()+"/worst : "+sortingEngine.getMAXTime();
             running = true;
 
             button1.Text = sortingEngine.getNextA();
@@ -62,6 +60,14 @@ namespace SortingProgram
             this.updateTitle();
         }
 
+        internal void setProgress(int progress)
+        {
+            this.sortingEngine.setProgress(progress);
+            button1.Text = sortingEngine.getNextA();
+            button2.Text = sortingEngine.getNextB();
+            this.updateTitle();
+        }
+
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
             running = false;
@@ -72,12 +78,28 @@ namespace SortingProgram
             {
                 sb.AppendLine(ars);
             }
-            Form1.instance.updateTextBox(sb.ToString());
+            instance.updateTextBox(sb.ToString());
+
+            instance.dataSource.progress = sortingEngine.getProgress();
+            instance.WriteSave();
         }
 
         private void updateTitle()
         {
-            this.label2.Text = "action count : " + counter + "     finishing in : " + total;
+            String total = "best : " + sortingEngine.getMINTime() + "/worst : " + sortingEngine.getMAXTime();
+            this.toolStripStatusLabel1.Text = "action count : " + counter + "     finishing in : " + total;
+        }
+
+        private void Form2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.A)
+            {
+                this.button1_Click(sender, e);
+            }
+            else if(e.KeyData == Keys.D)
+            {
+                this.button2_Click(sender, e);
+            }
         }
     }
 }

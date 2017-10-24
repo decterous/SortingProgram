@@ -146,6 +146,14 @@ namespace SortingProgram
             return ret;
         }
 
+        public void setProgress(int progress)
+        {
+        }
+
+        public int getProgress()
+        {
+            throw new NotImplementedException();
+        }
 
         private class SortingElement
         {

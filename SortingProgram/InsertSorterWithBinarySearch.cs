@@ -98,5 +98,14 @@ namespace SortingProgram
             ret.AddRange(source.GetRange(output.Count,source.Count - output.Count));
             return ret;
         }
+
+        public int getProgress()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setProgress(int progress)
+        {
+        }
     }
 }

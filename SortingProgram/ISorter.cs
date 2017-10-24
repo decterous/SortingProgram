@@ -14,5 +14,7 @@ namespace SortingProgram
         List<string> getOutput();
         int getMINTime();
         int getMAXTime();
+        void setProgress(int progress);
+        int getProgress();
     }
 }

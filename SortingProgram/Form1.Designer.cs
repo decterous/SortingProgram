@@ -99,6 +99,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
+            this.ShowInTaskbar = false;
             this.Text = "super sorting engine (by hand)";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

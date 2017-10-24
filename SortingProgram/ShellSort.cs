@@ -88,5 +88,14 @@ namespace SortingProgram
         {
             return source;
         }
+
+        public int getProgress()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void setProgress(int progress)
+        {
+        }
     }
 }
