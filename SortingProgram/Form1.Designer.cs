@@ -58,7 +58,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(297, 44);
             this.button1.TabIndex = 1;
-            this.button1.Text = "开始找出最爱";
+            this.button1.Text = "sort your love";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -87,7 +87,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(301, 44);
             this.button2.TabIndex = 0;
-            this.button2.Text = "打乱它们";
+            this.button2.Text = "shuffle";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -99,7 +99,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
-            this.Text = "超级手动排序器";
+            this.Text = "super sorting engine (by hand)";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

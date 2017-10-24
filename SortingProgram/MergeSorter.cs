@@ -145,34 +145,36 @@ namespace SortingProgram
             }
             return ret;
         }
-    }
 
-    internal class SortingElement
-    {
-        public List<int> partList;
 
-        public SortingElement(int i)
+        private class SortingElement
         {
-            this.partList = new List<int>();
-            partList.Add(i);
-        }
+            public List<int> partList;
 
-        public SortingElement()
-        {
-            this.partList = new List<int>();
-        }
-
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            if (partList.Count > 0) sb.Append("{");
-            foreach (int i in partList)
+            public SortingElement(int i)
             {
-                sb.Append(i);
-                sb.Append(",");
+                this.partList = new List<int>();
+                partList.Add(i);
             }
-            if(sb.Length > 0) sb[sb.Length - 1] = '}';
-            return sb.ToString();
+
+            public SortingElement()
+            {
+                this.partList = new List<int>();
+            }
+
+            public override string ToString()
+            {
+                StringBuilder sb = new StringBuilder();
+                if (partList.Count > 0) sb.Append("{");
+                foreach (int i in partList)
+                {
+                    sb.Append(i);
+                    sb.Append(",");
+                }
+                if (sb.Length > 0) sb[sb.Length - 1] = '}';
+                return sb.ToString();
+            }
         }
     }
+
 }
